@@ -19,3 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+// Agregar codigo para buscar el producto
+
+
+
