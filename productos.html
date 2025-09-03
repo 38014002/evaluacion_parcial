@@ -4,38 +4,64 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mi Tienda - Productos</title>
+
+  <!-- LINK AL CSS principal -->
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- LINK AL JS principal -->
   <script defer src="assets/js/script.js"></script>
 </head>
 <body>
+  <!-- === HEADER === -->
+  <!-- Contiene el logo de la tienda y la navegación principal -->
   <header class="site-header">
     <div class="container">
+      <!-- Logo / nombre de la tienda -->
       <h1 class="logo">MiTienda</h1>
-      <nav class="main-nav" aria-label="Navegación principal">
+
+      <!-- Menú de navegación -->
+      <nav class="main-nav">
+        <!-- Enlace a la página de inicio -->
         <a href="index.html">Inicio</a>
+
+        <!-- Enlace a productos (activo actualmente) -->
         <a href="productos.html" class="active">Productos</a>
+
+        <!-- Enlace a registro / login -->
         <a href="registro.html">Registro</a>
       </nav>
     </div>
   </header>
 
+  <!-- === MAIN === -->
+  <!-- Contenedor principal de contenido, en este caso los productos -->
   <main class="container">
+    <!-- Sección GRID para mostrar productos en tarjetas -->
     <section class="grid">
+      <!-- === TARJETA DE PRODUCTO 1 === -->
       <article class="card">
-        <img src="assets/css/img/640.jpg" alt="Producto 1" />
-        <h3>Televisor Master G 32 pulgadas</h3>
-        <p>109.990.</p>
+        <!-- Imagen del producto -->
+        <img src="assets/css/img/amd-5600g-1.png" alt="Cpu Ryzen 5 5600g" />
+        <!-- Nombre del producto -->
+        <h3>Cpu Ryzen 5 5600g</h3>
+        <!-- Precio del producto -->
+        <p class="price">$109.990</p>
+        <!-- Botón de acción: agregar al carrito -->
         <button type="button">Agregar al carrito</button>
       </article>
+
+      <!-- === TARJETA DE PRODUCTO 2 === -->
       <article class="card">
-        <img src="assets/css/img/630.jpg" alt="Producto 2" />
-        <h3>Parlante bluetooth onyx</h3>
-        <p>$136.990.</p>
+        <img src="img/630.jpg" alt="Producto 2" />
+        <h3></h3> <!-- Aquí iría el nombre del producto -->
+        <p class="price">$136.990</p>
         <button type="button">Agregar al carrito</button>
       </article>
     </section>
   </main>
 
+  <!-- === FOOTER === -->
+  <!-- Contiene información de derechos de autor y contacto -->
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>

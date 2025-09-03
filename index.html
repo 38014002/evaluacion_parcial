@@ -1,45 +1,107 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi Tienda - Inicio</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/script.js"></script>
+  <!-- CONFIGURACIÓN BÁSICA DE LA PÁGINA -->
+  <meta charset="utf-8" /> <!-- Soporte para acentos y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Adaptación a móviles -->
+  <title>Mi Tienda - Inicio</title> <!-- Título de la pestaña del navegador -->
+
+  <!-- ARCHIVOS EXTERNOS -->
+  <link rel="stylesheet" href="assets/css/style.css" /> <!-- Conexión con el CSS -->
+  <script defer src="assets/js/script.js"></script> <!-- Conexión con el JavaScript -->
 </head>
 <body>
+  <!-- ================== HEADER ================== -->
   <header class="site-header">
-    <div class="container">
+    <div class="container header-flex">
+      <!-- LOGO -->
+      <img src="img/logo.png" alt="Logo de MiTienda" class="logo-img">
       <h1 class="logo">MiTienda</h1>
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a href="index.html" class="active">Inicio</a>
+
+      <!-- NAVEGACIÓN PRINCIPAL -->
+      <nav class="main-nav">
+        <a href="index.html" class="active">Inicio</a> <!-- Enlace activo (Inicio) -->
         <a href="productos.html">Productos</a>
-        <a href="registro.html">Registro</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
       </nav>
+
+      <!-- SESIÓN Y CARRITO -->
+      <div class="session">
+        <a href="iniciar sesion.html">Iniciar sesión</a> | 
+        <a href="registro.html">Registrar usuario</a>
+        <a href="carrito.html" class="cart">Carrito 🛒 (0)</a> <!-- Carrito con contador -->
+      </div>
     </div>
   </header>
 
-<main class="container">
+  <!-- ================== HERO ================== -->
+  <main class="container">
     <section class="hero">
-      <h2>Bienvenido a MiTienda</h2>
-      <p>Ofertas, novedades y mucho más.</p>
-      <div class="imagen-wrap">
-        <img
-          src="https://img.freepik.com/fotos-premium/hombre-probando-nuevo-telefono-inteligente-interior-tienda-tecnologia_232070-5525.jpg"
-          alt="Hombre con teléfono"
-          class="hero-image">
+      <!-- TEXTO DE PRESENTACIÓN -->
+      <div class="hero-text">
+        <h2>TIENDA ONLINE</h2>
+        <p>Descubre nuestras últimas ofertas y productos destacados.</p>
+        <!-- BOTÓN QUE REDIRIGE A PRODUCTOS -->
+        <a href="productos.html" class="btn">Ver productos</a>
       </div>
-    </section>
-</main>
 
+      <!-- IMAGEN PRINCIPAL DE HERO -->
+      <div class="hero-image">
+        <img src="https://img.freepik.com/fotos-premium/hombre-probando-nuevo-telefono-inteligente-interior-tienda-tecnologia_232070-5525.jpg" alt="Imagen promocional">
       </div>
     </section>
   </main>
 
+  <!-- ================== PRODUCTOS DESTACADOS ================== -->
+  <section class="productos-grid">
+    <!-- Cada producto es un bloque -->
+    <div class="producto">
+      <img src="img/prod1.jpg" alt="Producto 1">
+      <h3>Producto 1</h3>
+      <p>$10.000</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/prod2.jpg" alt="Producto 2">
+      <h3>Producto 2</h3>
+      <p>$15.000</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/prod3.jpg" alt="Producto 3">
+      <h3>Producto 3</h3>
+      <p>$20.000</p>
+    </div>
+
+    <!-- Aquí puedes seguir agregando más productos -->
+  </section>
+
+  <!-- ================== FOOTER ================== -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
-      <p>Contacto: contacto@mitienda.com</p>
+    <div class="container footer-grid">
+      <!-- SECCIÓN DE CATEGORÍAS -->
+      <div>
+        <h4>Categorías</h4>
+        <a href="#">Categoría X</a><br>
+        <a href="#">Categoría Y</a><br>
+        <a href="#">Categoría Z</a>
+      </div>
+
+      <!-- SECCIÓN DE NEWSLETTER -->
+      <div>
+        <h4>Newsletter</h4>
+        <form>
+          <input type="email" placeholder="Ingresa tu email">
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div>
+        <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
+      </div>
     </div>
   </footer>
 </body>

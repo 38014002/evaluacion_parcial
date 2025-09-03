@@ -1,49 +1,204 @@
-* { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; color: #0f172a; background: #f8fafc; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+/* === RESET BÁSICO (Aplica a todas las páginas) === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Header / Nav */
-.site-header { background: #0b5bd3; color: #fff; }
-.logo { margin: 0; padding: 16px 0; }
-.main-nav { display: flex; gap: 16px; align-items: center; }
-.main-nav a { color: #fff; text-decoration: none; padding: 12px 8px; display: inline-block; }
-.main-nav a:hover, .main-nav a.active { text-decoration: underline; }
+/* === ESTILOS GENERALES (Aplica a todas las páginas) === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #000000; /* Fondo negro */
+  color: #4DA6FF;      /* Texto negro */
+  line-height: 1.6;
+}
 
+/* === HEADER (Index, Productos y Registro) === */
+.site-header {
+  background: #ffffff; /* Blanco */
+  padding: 1rem 0;
+  border-bottom: 2px solid #4DA6FF; /* Azul claro */
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #111111; /* Negro */
+}
+
+.main-nav a {
+  margin: 0 1rem;
+  color: #111111;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #4DA6FF; /* Azul claro */
+}
+
+/* === HERO (SOLO INDEX) === */
+.hero {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0890ff; /* Negro */
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+}
 
 .hero-image {
-  width: 80%;
-  height: auto;
-  max-height: 400px; 
-  object-fit: cover;
-  border-radius: 15px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(77,166,255,0.3);
+}
+
+/* === GRID DE PRODUCTOS (SOLO PRODUCTOS) === */
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 2rem 0;
+}
+
+.card {
+  background: #f0f8ff; /* Azul clarito */
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(77,166,255,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 50%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #4DA6FF;
+  margin: 0.5rem 0;
+}
+
+.card button {
+  padding: 0.7rem 1rem;
+  background: #4DA6FF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #1A8CFF;
+  box-shadow: 0 0 8px #4DA6FF;
+}
+
+/* === FORMULARIO REGISTRO Y CONTACTO (SOLO REGISTRO) === */
+.form-wrap {
+  max-width: 400px;
+  margin: 3rem auto;
+  background: #f0f8ff; /* Azul clarito */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(77,166,255,0.2);
+}
+
+.form-wrap h2,
+.form-wrap h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #111111; /* Negro */
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
   display: block;
-  margin: 0 auto;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
 }
 
-
-/* Grid y cards */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; padding: 24px 0; }
-.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
-.card img { width: 50%; height: 200px; object-fit: cover; border-radius: 8px; }
-.card h3 { margin: 12px 0 6px; }
-
-/* Formulario */
-.form-wrap { max-width: 520px; margin: 24px auto; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; }
-.field { display: grid; gap: 6px; margin-bottom: 14px; }
-.field.checkbox { grid-template-columns: 20px 1fr; align-items: center; gap: 10px; }
-input, button { font: inherit; }
-input[type="text"], input[type="email"], input[type="password"] {
-  width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; background: #f8fafc;
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #ffffff; /* Fondo blanco */
+  color: #111111;      /* Texto negro */
 }
-input:focus { outline: 2px solid #0b5bd3; border-color: #0b5bd3; background: #fff; }
-button { padding: 10px 14px; border: 0; border-radius: 10px; background: #0b5bd3; color: #fff; cursor: pointer; }
-button:hover { filter: brightness(1.05); }
 
-/* Errores */
-.error { color: #b91c1c; min-height: 1em; font-size: .9rem; }
-.invalid { border-color: #b91c1c !important; }
-.valid { border-color: #16a34a !important; }
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: #4DA6FF;
+  outline: none;
+  box-shadow: 0 0 8px #4DA6FF;
+}
 
-/* Footer */
-.site-footer { margin-top: 32px; background: #0b5bd3; color: #fff; padding: 16px 0; }
-.site-footer p { margin: 6px 0; }
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  background: #4DA6FF;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #1A8CFF;
+  box-shadow: 0 0 12px #4DA6FF;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: #ff4d4d;
+}
+
+/* === ESTRUCTURA GENERAL DE PÁGINA (Aplica a todas las páginas) === */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  flex: 1; /* Hace que MAIN crezca y empuje el footer hacia abajo */
+}
+
+/* === FOOTER (Index, Productos y Registro) === */
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #ffffff;
+  border-top: 2px solid #4DA6FF;
+  color: #111111;
+}
