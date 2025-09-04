@@ -15,27 +15,29 @@
   <!-- === HEADER === -->
   <!-- Contiene el logo de la tienda y la navegación principal -->
   <header class="site-header">
-    <div class="container">
+    <div class="container">  
       <!-- Logo / nombre de la tienda -->
-      <h1 class="logo">MiTienda</h1>
+      <h1 class="logo">PC STORE</h1>
 
       <!-- Menú de navegación -->
       <nav class="main-nav">
-        <!-- Enlace a la página de inicio -->
         <a href="index.html">Inicio</a>
-
-        <!-- Enlace a productos (activo actualmente) -->
         <a href="productos.html" class="active">Productos</a>
-
-        <!-- Enlace a registro / login -->
         <a href="registro.html">Registro</a>
+        <a href="'contacto.html">Contacto</a>
       </nav>
     </div>
   </header>
 
   <!-- === MAIN === -->
+
   <!-- Contenedor principal de contenido, en este caso los productos -->
   <main class="container">
+    <!-- Buscador de productos -->
+    <div class="search-bar">
+      <input type="text" id="buscar-producto" placeholder="Buscar producto...">
+    </div>
+
     <!-- Sección GRID para mostrar productos en tarjetas -->
     <section class="grid">
       <!-- === TARJETA DE PRODUCTO 1 === -->
@@ -50,13 +52,26 @@
         <button type="button">Agregar al carrito</button>
       </article>
 
-      <!-- === TARJETA DE PRODUCTO 2 === -->
       <article class="card">
-        <img src="img/630.jpg" alt="Producto 2" />
-        <h3></h3> <!-- Aquí iría el nombre del producto -->
+        <img src="assets/css/img/img.webp" alt="Producto 2" />
+        <h3>Placa Madre B460M DS3H V2</h3>
         <p class="price">$136.990</p>
         <button type="button">Agregar al carrito</button>
       </article>
+
+      <article class="card">
+        <img src="assets/css/img/img1.webp" alt="Producto 3" />
+        <h4>Tarjeta de video NVIDIA GeForce RTX 5090</h4>
+        <p class="price">$89.990</p>
+        <button type="button">Agregar al carrito</button>
+      </article>
+
+      <article class="card">
+        <img src="assets/css/img/IMG2.webp" alt="Producto4" />
+        <h4>PC Gamer V6 AMD Ryzen 5 5500</h4>
+        <p class="price">$119.990</p>
+        <button type="button">Agregar al carrito</button>
+       </article>
     </section>
   </main>
 
@@ -64,7 +79,7 @@
   <!-- Contiene información de derechos de autor y contacto -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
+      <p>&copy; 2025 PCSTORE. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
