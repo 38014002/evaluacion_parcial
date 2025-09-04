@@ -21,7 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Agregar codigo para buscar el producto
+// Agregar y quitar del carrito de compras //
+
+
+
+
 
 
 
