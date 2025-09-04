@@ -296,9 +296,9 @@ body {
 
 .form-wrap {
   background: #010203;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(77,166,255,0.1);
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(77,166,255,0.1);
 }
 
 .form-wrap h3 {
@@ -442,3 +442,29 @@ section.grid {
 
 
 
+/* para carrito */
+
+/* Footer se mantenga abajo */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+/* Fin footer abajo */
+
+/* Ajustar mensaje de carrito vacío */
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea a la izquierda */
+  padding: 40px 20px;      /* Empuja hacia abajo y deja margen lateral */
+}
+
+#mensaje-vacio {
+  margin-top: 30px;       /* Separación adicional debajo del título */
+  font-size: 1.1rem;
+}
