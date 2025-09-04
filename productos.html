@@ -15,17 +15,25 @@
   <!-- === HEADER === -->
   <!-- Contiene el logo de la tienda y la navegación principal -->
   <header class="site-header">
-    <div class="container">  
-      <!-- Logo / nombre de la tienda -->
+    <div class="container header-flex">
+      <!-- LOGO -->
+      <img src="assets/css/img/img1.png" alt="Logo de MiTienda" class="logo-img">
       <h1 class="logo">PC STORE</h1>
 
-      <!-- Menú de navegación -->
+      <!-- NAVEGACIÓN PRINCIPAL -->
       <nav class="main-nav">
-        <a href="index.html">Inicio</a>
-        <a href="productos.html" class="active">Productos</a>
-        <a href="registro.html">Registro</a>
-        <a href="'contacto.html">Contacto</a>
+        <a href="index.html" class="active">Inicio</a> <!-- Enlace activo (Inicio) -->
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
       </nav>
+
+      <!-- SESIÓN Y CARRITO -->
+      <div class="session">
+        <a href="iniciar sesion.html">Iniciar sesión</a> | 
+        <a href="registro.html">Registrar usuario</a>
+        <a href="carrito.html" class="cart">Carrito 🛒 (0)</a> <!-- Carrito con contador -->
+      </div>
     </div>
   </header>
 
@@ -78,9 +86,30 @@
   <!-- === FOOTER === -->
   <!-- Contiene información de derechos de autor y contacto -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 PCSTORE. Todos los derechos reservados.</p>
+    <div class="container footer-grid">
+      <!-- SECCIÓN DE CATEGORÍAS -->
+      <div>
+        <h4>Redes Sociales</h4>
+        <a href="#">Instagram</a><br>
+        <a href="#">Facebook</a><br>
+        <a href="#">Tik Tok</a>
+      </div>
+
+      <!-- SECCIÓN DE NEWSLETTER -->
+      <div>
+        <h4>Newsletter</h4>
+        <form>
+          <input type="email" placeholder="Ingresa tu email">
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div>
+        <p>&copy; 2025 PCSTORE. Todos los derechos reservados.</p>
+      </div>
     </div>
   </footer>
 </body>
 </html>
+

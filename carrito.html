@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito – MiTienda</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/carrito.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <img src="assets/css/img/img1.png" alt="Logo de MiTienda" class="logo-img">
+      <h1 class="logo">PC STORE</h1>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="session">
+        <a href="iniciar-sesion.html">Iniciar sesión</a> |
+        <a href="registro.html">Registrar usuario</a>
+        <a href="carrito.html" class="cart">Carrito 🛒 (0)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+    <h1>Tu Carrito</h1>
+
+    <!-- Mensaje si no hay productos -->
+    <div id="mensaje-vacio">
+      <p>No hay productos en el carrito.</p>
+    </div>
+
+    <!-- Lista de productos (añadidos dinámicamente) -->
+    <section id="lista-carrito" style="display: none;"></section>
+
+    <!-- Total y acciones -->
+    <section id="total-carrito" style="display: none;">
+      <h2>Total: $<span id="total">0</span></h2>
+      <div class="cart-actions">
+        <a href="productos.html" class="btn">← Seguir comprando</a>
+        <button class="btn">Finalizar compra</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+ <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- SECCIÓN DE CATEGORÍAS -->
+      <div>
+        <h4>Redes Sociales</h4>
+        <a href="#">Instagram</a><br>
+        <a href="#">Facebook</a><br>
+        <a href="#">Tik Tok</a>
+      </div>
+
+      <!-- SECCIÓN DE NEWSLETTER -->
+      <div>
+        <h4>Newsletter</h4>
+        <form>
+          <input type="email" placeholder="Ingresa tu email">
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div>
+        <p>&copy; 2025 PCSTORE. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
