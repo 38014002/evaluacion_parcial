@@ -1,115 +1,116 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi Tienda - Productos</title>
-
-  <!-- LINK AL CSS principal -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- LINK AL JS principal -->
-  <script defer src="assets/js/script.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Tienda - Productos</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/css/js/script.js"></script>
 </head>
 <body>
-  <!-- === HEADER === -->
-  <!-- Contiene el logo de la tienda y la navegación principal -->
-  <header class="site-header">
-    <div class="container header-flex">
-      <!-- LOGO -->
-      <img src="assets/css/img/img1.png" alt="Logo de MiTienda" class="logo-img">
-      <h1 class="logo">PC STORE</h1>
+    <header class="site-header">
+        <div class="container header-flex">
+            <img src="assets/css/img/img1.png" alt="Logo de MiTienda" class="logo-img">
+            <h1 class="logo">PC STORE</h1>
 
-      <!-- NAVEGACIÓN PRINCIPAL -->
-      <nav class="main-nav">
-        <a href="index.html" class="active">Inicio</a> <!-- Enlace activo (Inicio) -->
-        <a href="productos.html">Productos</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html" class="active">Productos</a> <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
 
-      <!-- SESIÓN Y CARRITO -->
-      <div class="session">
-        <a href="iniciar sesion.html">Iniciar sesión</a> | 
-        <a href="registro.html">Registrar usuario</a>
-        <a href="carrito.html" class="cart">Carrito 🛒 (0)</a> <!-- Carrito con contador -->
-      </div>
-    </div>
-  </header>
+            <div class="session">
+                <a href="iniciar-sesion.html">Iniciar sesión</a> | 
+                <a href="registro.html">Registrar usuario</a>
+                <a href="carrito.html" class="cart">Carrito 🛒 (0)</a> </div>
+        </div>
+    </header>
 
-  <!-- === MAIN === -->
+    <main class="container">
+        <div class="search-bar">
+            <input type="text" id="buscar-producto" placeholder="Buscar producto...">
+        </div>
 
-  <!-- Contenedor principal de contenido, en este caso los productos -->
-  <main class="container">
-    <!-- Buscador de productos -->
-    <div class="search-bar">
-      <input type="text" id="buscar-producto" placeholder="Buscar producto...">
-    </div>
+        <section class="grid">
+            <article class="card" data-id="1">
+                <img src="assets/css/img/amd-5600g-1.png" alt="Cpu Ryzen 5 5600g" />
+                <h3 class="nombre-producto">Cpu Ryzen 5 5600g</h3>
+                <p class="price precio-producto">$109.990</p>
+                <button type="button" class="btn-agregar">Agregar al carrito</button>
+            </article>
 
-    <!-- Sección GRID para mostrar productos en tarjetas -->
-    <section class="grid">
-      <!-- === TARJETA DE PRODUCTO 1 === -->
-      <article class="card">
-        <!-- Imagen del producto -->
-        <img src="assets/css/img/amd-5600g-1.png" alt="Cpu Ryzen 5 5600g" />
-        <!-- Nombre del producto -->
-        <h3>Cpu Ryzen 5 5600g</h3>
-        <!-- Precio del producto -->
-        <p class="price">$109.990</p>
-        <!-- Botón de acción: agregar al carrito -->
-        <button type="button">Agregar al carrito</button>
-      </article>
+            <article class="card" data-id="2">
+                <img src="assets/css/img/img.webp" alt="Producto 2" />
+                <h3 class="nombre-producto">Placa Madre B460M DS3H V2</h3>
+                <p class="price precio-producto">$136.990</p>
+                <button type="button" class="btn-agregar">Agregar al carrito</button>
+            </article>
 
-      <article class="card">
-        <img src="assets/css/img/img.webp" alt="Producto 2" />
-        <h3>Placa Madre B460M DS3H V2</h3>
-        <p class="price">$136.990</p>
-        <button type="button">Agregar al carrito</button>
-      </article>
+            <article class="card" data-id="3">
+                <img src="assets/css/img/img1.webp" alt="Producto 3" />
+                <h4 class="nombre-producto">Tarjeta de video NVIDIA GeForce RTX 5090</h4>
+                <p class="price precio-producto">$89.990</p>
+                <button type="button" class="btn-agregar">Agregar al carrito</button>
+            </article>
 
-      <article class="card">
-        <img src="assets/css/img/img1.webp" alt="Producto 3" />
-        <h4>Tarjeta de video NVIDIA GeForce RTX 5090</h4>
-        <p class="price">$89.990</p>
-        <button type="button">Agregar al carrito</button>
-      </article>
+            <article class="card" data-id="4">
+                <img src="assets/css/img/IMG2.webp" alt="Producto4" />
+                <h4 class="nombre-producto">PC Gamer V6 AMD Ryzen 5 5500</h4>
+                <p class="price precio-producto">$119.990</p>
+                <button type="button" class="btn-agregar">Agregar al carrito</button>
+            </article>
 
-      <article class="card">
-        <img src="assets/css/img/IMG2.webp" alt="Producto4" />
-        <h4>PC Gamer V6 AMD Ryzen 5 5500</h4>
-        <p class="price">$119.990</p>
-        <button type="button">Agregar al carrito</button>
-       </article>
-    </section>
-  </main>
+            <article class="card" data-id="5">
+                <img src="assets/css/img/imagen1.webp" alt="Producto4" />
+                <h4 class="nombre-producto">Kingston Memoria RAM FURY Beast DDR5</h4>
+                <p class="price precio-producto">$19.990</p>
+                <button type="button" class="btn-agregar">Agregar al carrito</button>
+            </article>
+            
+            <article class="card" data-id="6">
+                <img src="assets/css/img/imagen2.webp" alt="Producto4" />
+                <h4 class="nombre-producto">Procesador Intel Core Ultra 5 245KF</h4>
+                <p class="price precio-producto">$319.990</p>
+                <button type="button" class="btn-agregar">Agregar al carrito</button>
+            </article>
+            
+            <article class="card" data-id="7">
+                <img src="assets/css/img/imagen3.webp" alt="Producto4" />
+                <h4 class="nombre-producto">Ventilador Gabinete PC Kronos Eurus, ARGB, 120mm, PWM, Black</h4>
+                <p class="price precio-producto">$19.990</p>
+                <button type="button" class="btn-agregar">Agregar al carrito</button>
+            </article>
+            
+            <article class="card" data-id="8">
+                <img src="assets/css/img/imagen4.webp" alt="Producto4" />
+                <h4 class="nombre-producto">Fuente de Poder Corsair RM1000e</h4>
+                <p class="price precio-producto">$219.990</p>
+                <button type="button" class="btn-agregar">Agregar al carrito</button>
+            </article> 
+        </section>
+    </main>
 
-  <!-- === FOOTER === -->
-  <!-- Contiene información de derechos de autor y contacto -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <!-- SECCIÓN DE CATEGORÍAS -->
-      <div>
-        <h4>Redes Sociales</h4>
-        <a href="#">Instagram</a><br>
-        <a href="#">Facebook</a><br>
-        <a href="#">Tik Tok</a>
-      </div>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>Redes Sociales</h4>
+                <a href="#">Instagram</a><br>
+                <a href="#">Facebook</a><br>
+                <a href="#">Tik Tok</a>
+            </div>
 
-      <!-- SECCIÓN DE NEWSLETTER -->
-      <div>
-        <h4>Newsletter</h4>
-        <form>
-          <input type="email" placeholder="Ingresa tu email">
-          <button type="submit">Suscribirse</button>
-        </form>
-      </div>
+            <div>
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Ingresa tu email">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
 
-      <!-- COPYRIGHT -->
-      <div>
-        <p>&copy; 2025 PCSTORE. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
+            <div>
+                <p>&copy; 2025 PCSTORE. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-
