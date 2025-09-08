@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+//Script para añadir productos al carro de compra
+
 document.addEventListener('DOMContentLoaded', () => {
     // Referencias comunes a ambos archivos
     const contadorCarritoHeader = document.querySelector('.cart');
@@ -77,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Lógica para la página del carrito
-    // Verificamos si estamos en la URL de carrito.html
     if (window.location.pathname.includes('carrito.html')) {
         const listaCarrito = document.getElementById('lista-carrito');
         const mensajeVacio = document.getElementById('mensaje-vacio');
@@ -151,6 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+// Script para ingresar a una cuenta de usuario o administrador
+
 document.addEventListener('DOMContentLoaded', () => {
     const formLogin = document.getElementById('form-login');
     const loginEmailInput = document.getElementById('login-email');
@@ -164,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = loginEmailInput.value;
 
         // --- INICIO DE LA LÓGICA DE SIMULACIÓN ---
-        // ESTO NO ES SEGURO PARA UN SITIO REAL. ES SOLO PARA DEMOSTRACIÓN.
 
         // Revisa si el correo termina con "@duocuc.cl"
         if (email.endsWith('@duocuc.cl')) {
@@ -177,4 +182,88 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- FIN DE LA LÓGICA DE SIMULACIÓN ---
     });
+});
+
+
+// Script para crear cuenta
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form-registro');
+    const nombreInput = document.getElementById('nombre');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const password2Input = document.getElementById('password2');
+    const tycCheckbox = document.getElementById('tyc');
+
+    form.addEventListener('submit', function(event) {
+        // Previene el envío del formulario.
+        event.preventDefault();
+
+        // Elimina los mensajes de error previos.
+        clearErrors();
+
+        let isValid = true;
+
+        // Validación del nombre
+        if (nombreInput.value.trim() === '') {
+            showError('err-nombre', 'Por favor, introduce tu nombre completo.');
+            isValid = false;
+        }
+
+        // Validación del correo electrónico
+        if (emailInput.value.trim() === '') {
+            showError('err-email', 'El correo electrónico es un campo obligatorio.');
+            isValid = false;
+        } else if (!isValidEmail(emailInput.value)) {
+            showError('err-email', 'Por favor, introduce un correo electrónico válido.');
+            isValid = false;
+        }
+
+        // Validación de la contraseña
+        if (passwordInput.value.trim() === '') {
+            showError('err-password', 'La contraseña es un campo obligatorio.');
+            isValid = false;
+        } else if (passwordInput.value.length < 6) {
+            showError('err-password', 'La contraseña debe tener al menos 6 caracteres.');
+            isValid = false;
+        }
+
+        // Validación de la confirmación de contraseña
+        if (password2Input.value.trim() === '') {
+            showError('err-password2', 'Por favor, repite la contraseña.');
+            isValid = false;
+        } else if (password2Input.value !== passwordInput.value) {
+            showError('err-password2', 'Las contraseñas no coinciden.');
+            isValid = false;
+        }
+
+        // Validación de los términos y condiciones
+        if (!tycCheckbox.checked) {
+            showError('err-tyc', 'Debes aceptar los Términos y Condiciones.');
+            isValid = false;
+        }
+
+        // Si todos los campos son válidos, se podría enviar el formulario.
+        if (isValid) {
+            alert('¡Formulario enviado correctamente!');
+        }
+    });
+
+    function showError(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        if (errorElement) {
+            errorElement.textContent = message;
+        }
+    }
+
+    function clearErrors() {
+        const errorElements = document.querySelectorAll('.error');
+        errorElements.forEach(el => el.textContent = '');
+    }
+
+    function isValidEmail(email) {
+        // validar un email básico
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
 });

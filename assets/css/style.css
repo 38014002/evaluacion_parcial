@@ -158,23 +158,38 @@ select:focus {
   margin-left: 0.5rem;
 }
 
-button,
-.btn {
-  width: 100%;
-  padding: 0.8rem;
+/* Estilos generales para todos los botones y enlaces con la clase .btn */
+.btn,
+button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
   border: none;
   border-radius: var(--btn-radius);
-  background: var(--primary-color);
-  color: #fff;
   font-weight: bold;
   cursor: pointer;
-  transition: background var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+  transition: background var(--transition);
+  text-align: center;
 }
+
+button,
+.btn {
+width: 100%;
+padding: 0.8rem;
+border: none;
+border-radius: var(--btn-radius);
+background: var(--primary-color);
+color: #fff;
+font-weight: bold;
+cursor: pointer;
+transition: background var(--transition), box-shadow var(--transition);
+}
+
 
 button:hover,
 .btn:hover {
-  background: var(--primary-hover);
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+background: var(--primary-hover);
+box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
 /* Mensajes de error */
