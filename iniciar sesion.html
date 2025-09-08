@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar Sesión_MiTienda</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script defer src="assets/css/js/script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar - Sesión</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/script.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -13,47 +13,43 @@
     <div class="container header-flex">
       <img src="assets/css/img/img1.png" alt="Logo de MiTienda" class="logo-img">
       <h1 class="logo">PC STORE</h1>
+
       <nav class="main-nav">
         <a href="index.html">Inicio</a>
         <a href="productos.html">Productos</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
       </nav>
+
       <div class="session">
-        <a href="iniciar-sesion.html" class="active">Iniciar sesión</a> |
+        <a href="iniciar-sesion.html" class="active">Iniciar sesión</a> | 
         <a href="registro.html">Registrar usuario</a>
         <a href="carrito.html" class="cart">Carrito 🛒 (0)</a>
       </div>
     </div>
   </header>
 
-  <!-- MAIN -->
+  <!-- FORMULARIO DE LOGIN -->
   <main class="container">
-    <h1>Iniciar Sesión</h1>
+    <section class="form-wrap">
+      <h2>Iniciar Sesión</h2>
+      <form id="form-login" novalidate autocomplete="on">
+        <div class="field">
+          <label for="login-email">Correo electrónico</label>
+          <input id="login-email" type="email" required placeholder="ejemplo@correo.com" />
+          <small class="error" id="err-login-email"></small>
+        </div>
 
-    <form id="login-form">
-      <div class="form-group">
-        <label for="email">Correo o usuario:</label>
-        <input type="text" id="email" name="email" placeholder="Ingrese su correo o usuario" required>
-      </div>
+        <div class="field">
+          <label for="login-password">Contraseña</label>
+          <input id="login-password" type="password" required minlength="4" maxlength="10" />
+          <small class="error" id="err-login-password"></small>
+        </div>
 
-      <div class="form-group">
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
-      </div>
-
-      <div class="form-actions">
-        <button type="submit" class="btn">Iniciar sesión</button>
-      </div>
-
-      <p class="login-register">
-        ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
-      </p>
-
-      <p id="login-error" style="display:none; color:red;">
-        Usuario o contraseña incorrectos.
-      </p>
-    </form>
+        <button type="submit">Iniciar sesión</button>
+        <p id="login-msg" class="success"></p>
+      </form>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -63,19 +59,38 @@
         <h4>Redes Sociales</h4>
         <a href="#">Instagram</a><br>
         <a href="#">Facebook</a><br>
-        <a href="#">TikTok</a>
+        <a href="#">Tik Tok</a>
       </div>
+
       <div>
-        <h4>Newsletter</h4>
+        <h4>Suscribirse</h4>
         <form>
           <input type="email" placeholder="Ingresa tu email">
           <button type="submit">Suscribirse</button>
         </form>
       </div>
+
       <div>
         <p>&copy; 2025 PCSTORE. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
+    <script> 
+      document.addEventListener('DOMContentLoaded', () => {
+          const formLogin = document.getElementById('form-login');
+          const loginEmailInput = document.getElementById('login-email');
+
+          formLogin.addEventListener('submit', (e) => {
+              e.preventDefault();
+              const email = loginEmailInput.value;
+
+              if (email.endsWith('@duocuc.cl')) {
+                  window.location.href = 'administrador.html';
+              } else {
+                  window.location.href = 'index.html'; 
+              }
+          });
+      });
+  </script>
 </body>
 </html>

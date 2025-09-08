@@ -149,3 +149,32 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito();
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const formLogin = document.getElementById('form-login');
+    const loginEmailInput = document.getElementById('login-email');
+
+    // Escucha el evento de envío del formulario
+    formLogin.addEventListener('submit', (e) => {
+        // Previene el comportamiento por defecto del formulario (recargar la página)
+        e.preventDefault();
+
+        // Obtiene el valor del correo electrónico
+        const email = loginEmailInput.value;
+
+        // --- INICIO DE LA LÓGICA DE SIMULACIÓN ---
+        // ESTO NO ES SEGURO PARA UN SITIO REAL. ES SOLO PARA DEMOSTRACIÓN.
+
+        // Revisa si el correo termina con "@duocuc.cl"
+        if (email.endsWith('@duocuc.cl')) {
+            // Si es un correo de Duoc, redirige a la página de administrador
+            window.location.href = 'modo_administrador.html';
+        } else {
+            // Si no es de Duoc, redirige a una página de usuario normal (ej. la página principal)
+            window.location.href = 'index.html'; 
+        }
+
+        // --- FIN DE LA LÓGICA DE SIMULACIÓN ---
+    });
+});

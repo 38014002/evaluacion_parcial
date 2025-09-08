@@ -3,76 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin – MiTienda</title>
+  <title>Administrador - Panel</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <script defer src="assets/css/js/script.js"></script>
 </head>
-<body id="admin-page">
+<body>
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-flex">
       <img src="assets/css/img/img1.png" alt="Logo de MiTienda" class="logo-img">
-      <h1 class="logo">PC STORE - Admin</h1>
-         <nav class="main-nav">
-           <a href="admin.html" class="active">Inicio</a>
-          <a href="admin-productos.html">Productos</a>
-          <a href="index.html">Ir a la tienda</a>
-        </nav>
+      <h1 class="logo">PC STORE - Administrador</h1>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a> <!-- Opcional: volver a la tienda pública -->
+      </nav>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main>
-    <h1>Panel de Administrador</h1>
-
-    <!-- SECCIÓN PRODUCTOS -->
-    <section class="admin-section" id="admin-productos">
-      <h2>Gestión de Productos</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="productos-body">
-          <!-- Productos se cargan con JS -->
-        </tbody>
-      </table>
-      <button id="agregar-producto">Agregar Nuevo Producto</button>
-      <p class="mensaje" id="mensaje-productos"></p>
-    </section>
-
-    <!-- SECCIÓN USUARIOS -->
-    <section class="admin-section" id="admin-usuarios">
-      <h2>Gestión de Usuarios</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Rol</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="usuarios-body">
-          <!-- Usuarios se cargan con JS -->
-        </tbody>
-      </table>
-      <button id="agregar-usuario">Agregar Nuevo Usuario</button>
-      <p class="mensaje" id="mensaje-usuarios"></p>
+  <!-- PANEL DE SELECCIÓN -->
+  <main class="container admin-container">
+    <section class="admin-selection" style="text-align:center; margin-top:50px;">
+      <h2>Selecciona qué gestionar</h2>
+      <div style="margin-top:30px;">
+        <a href="gestion_usuario.html" style="display:inline-block; padding:20px 40px; margin-right:20px; background-color:#007BFF; color:white; border-radius:8px; text-decoration:none; font-size:1.2rem;">Gestionar Usuarios</a>
+        <a href="gestion_productos.html" style="display:inline-block; padding:20px 40px; background-color:#28a745; color:white; border-radius:8px; text-decoration:none; font-size:1.2rem;">Gestionar Productos</a>
+      </div>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <p>&copy; 2025 PCSTORE. Panel de administración.</p>
+      <div>
+        <h4>Redes Sociales</h4>
+        <a href="#">Instagram</a><br>
+        <a href="#">Facebook</a><br>
+        <a href="#">Tik Tok</a>
+      </div>
     </div>
   </footer>
 </body>
 </html>
+
